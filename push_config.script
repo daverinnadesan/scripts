@@ -1,5 +1,5 @@
 #!/bin/bash
-email=$(cat /home/homeassistant/scripts/email.txt)
+email=$(cat /home/homeassistant/config/email.txt)
 echo "Commiting changes"
 git -C /home/homeassistant/config/ commit -a -m "Standard Message"
 echo "Pushing config to github @${email}"
