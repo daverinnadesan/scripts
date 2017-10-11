@@ -1,0 +1,7 @@
+#!/bin/bash
+email=$(cat /home/homeassistant/config/email.txt)
+echo "Commiting changes"
+git -C /home/homeassistant/scripts/ commit -a -m "Standard Message"
+echo "Pushing scripts to github Master"
+git -C /home/homeassistant/scripts/ push github_rsdata_scripts master
+echo "Done"
