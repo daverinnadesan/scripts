@@ -2,4 +2,5 @@
 email=$(cat /home/homeassistant/config/email.txt)
 echo "Pulling Source from Master"
 git -C /home/homeassistant/source/ pull github_rsdata_source master
+/srv/homeassistant/bin/pip3 install --upgrade git+file:///home/homeassistant/source@master
 echo "Done"
