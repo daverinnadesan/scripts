@@ -1,0 +1,5 @@
+#!/bin/bash
+email=$(cat /home/homeassistant/scripts/email.txt)
+echo "Pulling Config from ${email}"
+git -C /home/homeassistant/config/ pull github_rsdata_config ${email}
+echo "Done"

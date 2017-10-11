@@ -1,0 +1,5 @@
+#!/bin/bash
+email=$(cat /home/homeassistant/scripts/email.txt)
+echo "Pulling Source from Master"
+git -C /home/homeassistant/source/ pull github_rsdata_source master
+echo "Done"
