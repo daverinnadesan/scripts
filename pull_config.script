@@ -2,5 +2,4 @@
 email=$(cat /home/homeassistant/config/email.txt)
 echo "Pulling Config from ${email}"
 git -C /home/homeassistant/config/ pull github_rsdata_config ${email}
-sudo systemctl restart home-assistant@homeassistant
 echo "Done"
