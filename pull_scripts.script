@@ -1,4 +1,5 @@
 #!/bin/bash
+git remote add github_rsdata_scripts git@github.com:daverinnadesan/scripts.git
 email=$(cat /home/homeassistant/config/email.txt)
 echo "Pulling Scripts from Master"
 git -C /home/homeassistant/scripts/ pull github_rsdata_scripts master
