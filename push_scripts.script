@@ -1,5 +1,5 @@
 #!/bin/bash
-git remote add github_rsdata_scripts git@github.com:daverinnadesan/scripts.git
+git -C /home/homeassistant/scripts/ remote add github_rsdata_scripts git@github.com:daverinnadesan/scripts.git
 echo "Commiting changes"
 git -C /home/homeassistant/scripts/ commit -a -m "Script Commit"
 echo "Pushing scripts to github Master"

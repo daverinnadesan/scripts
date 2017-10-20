@@ -1,5 +1,5 @@
 #!/bin/bash
-git remote add github_rsdata_source git@github.com:daverinnadesan/rsdata_homeassistant.git
+git -C /home/homeassistant/source/ remote add github_rsdata_source git@github.com:daverinnadesan/rsdata_homeassistant.git
 email=$(cat /home/homeassistant/config/email.txt)
 echo "Pulling Source from Master"
 git -C /home/homeassistant/source/ pull github_rsdata_source master

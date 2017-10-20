@@ -1,5 +1,5 @@
 #!/bin/bash
-git remote add github_rsdata_appdaemon_apps git@github.com:daverinnadesan/appdaemon_apps.git
+git -C /home/homeassistant/config/appdaemon/appdaemon_apps remote add github_rsdata_appdaemon_apps git@github.com:daverinnadesan/appdaemon_apps.git
 echo "Pulling Appdaemon apps from Master"
 git -C /home/homeassistant/config/appdaemon/appdaemon_apps pull github_rsdata_appdaemon_apps master
 echo "Done"

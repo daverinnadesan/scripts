@@ -1,5 +1,5 @@
 #!/bin/bash
-git remote add github_rsdata_custom_components git@github.com:daverinnadesan/custom_components.git
+git -C /home/homeassistant/config/custom_components remote add github_rsdata_custom_components git@github.com:daverinnadesan/custom_components.git
 echo "Commiting changes"
 git -C /home/homeassistant/config/custom_components commit -a -m "Script Commit"
 echo "Pushing custom_components to github Master"

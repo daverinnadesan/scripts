@@ -1,5 +1,5 @@
 #!/bin/bash
-git remote add github_rsdata_appdaemon_apps git@github.com:daverinnadesan/appdaemon_apps.git
+git -C /home/homeassistant/config/appdaemon/appdaemon_apps remote add github_rsdata_appdaemon_apps git@github.com:daverinnadesan/appdaemon_apps.git
 echo "Commiting changes"
 git -C /home/homeassistant/config/appdaemon/appdaemon_apps commit -a -m "Script Commit"
 echo "Pushing appdaemon_apps to github Master"

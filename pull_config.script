@@ -1,5 +1,5 @@
 #!/bin/bash
-git remote add github_rsdata_config git@github.com:daverinnadesan/ha_config.git
+git -C /home/homeassistant/config/ remote add github_rsdata_config git@github.com:daverinnadesan/ha_config.git
 email=$(cat /home/homeassistant/config/email.txt)
 echo "Pulling Config from ${email}"
 git -C /home/homeassistant/config/ pull github_rsdata_config ${email}
