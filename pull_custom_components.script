@@ -1,0 +1,5 @@
+#!/bin/bash
+git remote add github_rsdata_custom_components git@github.com:daverinnadesan/custom_components.git
+echo "Pulling custom_components from Master"
+git -C /home/homeassistant/config/custom_components pull github_rsdata_custom_components master
+echo "Done"
