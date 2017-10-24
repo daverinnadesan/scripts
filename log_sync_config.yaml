@@ -1,0 +1,25 @@
+aws:
+  ACCESS_KEY: AKIAJBAJSVNDYEEFVGGQ
+  SECRET_KEY: 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
+logs:
+  appdaemon_errorLog:
+    location: /home/homeassistant/config/appdaemon/errorLog
+    log_name: appdaemon_errorLog
+    time_interval: 1800
+    timestamp_end: 19
+    timestamp_format: '%Y-%m-%d %H:%M:%S'
+    timestamp_start: 0
+  appdaemon_log:
+    location: /home/homeassistant/config/appdaemon/log
+    log_name: appdaemon_log
+    time_interval: 1800
+    timestamp_end: 19
+    timestamp_format: '%Y-%m-%d %H:%M:%S'
+    timestamp_start: 0
+  homeassistant_log:
+    location: /home/homeassistant/config/home-assistant.log
+    log_name: homeassistant_log
+    time_interval: 1800
+    timestamp_end: 19
+    timestamp_format: '%Y-%m-%d %H:%M:%S'
+    timestamp_start: 0
