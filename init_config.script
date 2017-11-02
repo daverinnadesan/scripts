@@ -1,0 +1,14 @@
+#!/bin/bash
+email=$(cat email.txt)
+email_refined="${email/@/_at_}"
+pi_serial="$(sudo cat /proc/cpuinfo | grep Serial | cut -d ' ' -f 2)"
+
+echo "Initializing Git Config...${email}"
+sudo -H -u homeassistant bash -c "git config --global user.name ${email}"
+sudo -H -u homeassistant bash -c "git config --global user.email ${pi_serial}"
+sudo -H -u homeassistant bash -c "mkdir /home/homeassistant/config"
+sudo -H -u homeassistant bash -c "git -C /home/homeassistant/config/ init"
+sudo -H -u homeassistant bash -c "git -C /home/homeassistant/config/ remote add github_rsdata_config git@github.com:daverinnadesan/ha_config.git"
+echo "Pulling Config from master..."
+sudo -H -u homeassistant bash -c "git -C /home/homeassistant/config/ pull github_rsdata_config ${email}"
+echo "Done"
