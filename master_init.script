@@ -1,0 +1,5 @@
+#!/bin/bash
+
+bash /home/homeassistant/scripts/init_config.script
+bash /home/homeassistant/scripts/init_source.script
+bash /home/homeassistant/scripts/init_appdaemon_apps.script
