@@ -1,0 +1,17 @@
+#!/bin/bash
+email=$(cat email.txt)
+email_refined="${email/@/_at_}"
+pi_serial="$(sudo cat /proc/cpuinfo | grep Serial | cut -d ' ' -f 2)"
+
+echo "Initializing Git Source..."
+sudo -H -u homeassistant bash -c "mkdir /home/homeassistant/source"
+sudo -H -u homeassistant bash -c "git -C /home/homeassistant/source/ init"
+sudo -H -u homeassistant bash -c "git -C /home/homeassistant/source/ remote add github_rsdata_source git@github.com:daverinnadesan/rsdata_homeassistant.git"
+echo "Pulling Source from master..."
+sudo -H -u homeassistant bash -c "git -C /home/homeassistant/source/ pull github_rsdata_source master"
+echo "Creating branch ${email}..."
+sudo -H -u homeassistant bash -c "git -C /home/homeassistant/source/ checkout -b ${email}"
+echo "Installing homeassistant..."
+sudo -H -u homeassistant bash -c "/srv/homeassistant/bin/pip3 install --upgrade git+file:///home/homeassistant/source@master"
+sudo systemctl enable home-assistant@homeassistant
+echo "Done"
