@@ -1,0 +1,7 @@
+#!/bin/bash
+sudo -H -u homeassistant bash -c "mkdir /home/homeassistant/config/appdaemon/appdaemon_apps"
+sudo -H -u homeassistant bash -c "git -C /home/homeassistant/config/appdaemon/appdaemon_apps/ init"
+sudo -H -u homeassistant bash -c "git -C /home/homeassistant/config/appdaemon/appdaemon_apps remote add github_rsdata_appdaemon_apps git@github.com:daverinnadesan/appdaemon_apps.git"
+echo "Pulling Appdaemon apps from Master"
+sudo -H -u homeassistant bash -c "git -C /home/homeassistant/config/appdaemon/appdaemon_apps pull github_rsdata_appdaemon_apps master"
+echo "Done"
