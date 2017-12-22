@@ -1,8 +1,8 @@
 #!/bin/bash
 git -C /home/homeassistant/config/ remote add github_rsdata_config git@github.com:daverinnadesan/ha_config.git
-email=$(cat /home/homeassistant/config/email.txt)
+userId=$(cat /boot/userId.txt)
 echo "Commiting changes"
 git -C /home/homeassistant/config/ commit -a -m "Standard Message"
-echo "Pushing config to github @${email}"
-git -C /home/homeassistant/config/ push github_rsdata_config ${email}
+echo "Pushing config to github @${userId}"
+git -C /home/homeassistant/config/ push github_rsdata_config ${userId}
 echo "Done"
